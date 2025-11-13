@@ -21,9 +21,9 @@ Based on this, we can distinguish between three algorithms used in recommender s
 
 > ```
 > LOGIN THROUGH **EMAIL AND PASSWORD**:
-> Username:harshita
-> Email:harshita@gmail.com
-> password:harshita
+> Username:mahima
+> Email:mahima@gmail.com
+> password:mahima
 > ```
 
 <!--  Video Link: https://drive.google.com/file/d/1rBTYlnOfKFmisIjy8UsqPYyQxGSQ96Ay/view?usp=sharing -->
@@ -164,9 +164,5 @@ it will show information about the user0
 
 4) Providing the feature for the user to know which movie is available on which platform like prime, Netflix etc and writing Reviews.
 
-**THANKYOU**
-
-**BY-HARSHITA GUPTA**
-=======
 # movie_recommender
 >>>>>>> a12384614b049b5e97479acf67dc5b087239cac9
