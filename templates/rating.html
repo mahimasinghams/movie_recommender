@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+    <head>
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" />
+        <title>Rating</title> 
+        <style type="text/css">    
+          body
+          { color: antiquewhite!important;
+                    } 
+          #update{
+            margin-bottom: 20px;
+            width: 70%;
+            margin-right: 40px;
+          }
+        </style>
+        
+
+    </head>
+
+    <body>
+        <header class="header">
+            <a href="#" class="logo"><img src="static\mbox-logo.png" alt="" style="width:90px" ></a>
+            <button class="header__btn_open-topnav header__btn"><span class="icon-menu-open"></span></button>
+            <ul class="topnav topnav_mobile_show">
+              <button class="header__btn_close-topnav header__btn"><span class="icon-menu-close"></span></button>
+              <li class="topnav__item">
+                <a href="home" class="topnav__link">Home</a>
+              </li>
+              <li class="topnav__item">
+                <a href="categories" class="topnav__link">Categories</a>
+              </li>
+              
+              <li class="topnav__item">
+                <a href="rating" class="topnav__link">Rate(GENRE)</a>
+              </li>
+              
+              <li class="topnav__item">
+                <a href="frontpage" class="topnav__link">SignOut</a>
+              </li>
+              
+            
+
+            </ul>
+          </header>
+        <!-- {% extends "template.html" %} -->
+        <!-- {% block content %} -->
+        <!-- <h1>Please rate each genre based on your preference </h1> -->
+        <form  id="formformat" action="{{ url_for('recommendation') }}" method="POST">
+            <!-- <h3 style="color: white ;margin-right: 60px;"><center>Rating-5>4>3>2>1</center></h3> -->
+           
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Action </font>genre?</strong><br/></p>
+
+                <input type="radio" name="Action" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Action" value="1" > 1<br>
+                <input type="radio" name="Action" value="2"> 2<br>
+                <input type="radio" name="Action" value="3"> 3<br>
+                <input type="radio" name="Action" value="4"> 4<br>
+                <input type="radio" name="Action" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Adventure </font>genre?</strong><br/></p>
+
+                <input type="radio" name="Adventure" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Adventure" value="1" > 1<br>
+                <input type="radio" name="Adventure" value="2"> 2<br>
+                <input type="radio" name="Adventure" value="3"> 3<br>
+                <input type="radio" name="Adventure" value="4"> 4<br>
+                <input type="radio" name="Adventure" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Animation </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Animation" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Animation" value="1" > 1<br>
+                <input type="radio" name="Animation" value="2"> 2<br>
+                <input type="radio" name="Animation" value="3"> 3<br>
+                <input type="radio" name="Animation" value="4"> 4<br>
+                <input type="radio" name="Animation" value="5"> 5
+            </div>
+            
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Children's </font>genre?</strong><br/></p>
+
+                <input type="radio" name="Children" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Children" value="1" > 1<br>
+                <input type="radio" name="Children" value="2"> 2<br>
+                <input type="radio" name="Children" value="3"> 3<br>
+                <input type="radio" name="Children" value="4"> 4<br>
+                <input type="radio" name="Children" value="5"> 5
+            </div>
+
+            <div>
+             <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Comedy </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Comedy" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Comedy" value="1" > 1<br>
+                <input type="radio" name="Comedy" value="2"> 2<br>
+                <input type="radio" name="Comedy" value="3"> 3<br>
+                <input type="radio" name="Comedy" value="4"> 4<br>
+                <input type="radio" name="Comedy" value="5"> 5
+            </div>
+
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Crime </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Crime" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Crime" value="1" > 1<br>
+                <input type="radio" name="Crime" value="2"> 2<br>
+                <input type="radio" name="Crime" value="3"> 3<br>
+                <input type="radio" name="Crime" value="4"> 4<br>
+                <input type="radio" name="Crime" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Documentary </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Documentary" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Documentary" value="1" > 1<br>
+                <input type="radio" name="Documentary" value="2"> 2<br>
+                <input type="radio" name="Documentary" value="3"> 3<br>
+                <input type="radio" name="Documentary" value="4"> 4<br>
+                <input type="radio" name="Documentary" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Drama </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Drama" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Drama" value="1" > 1<br>
+                <input type="radio" name="Drama" value="2"> 2<br>
+                <input type="radio" name="Drama" value="3"> 3<br>
+                <input type="radio" name="Drama" value="4"> 4<br>
+                <input type="radio" name="Drama" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Fantasy </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Fantasy" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Fantasy" value="1" > 1<br>
+                <input type="radio" name="Fantasy" value="2"> 2<br>
+                <input type="radio" name="Fantasy" value="3"> 3<br>
+                <input type="radio" name="Fantasy" value="4"> 4<br>
+                <input type="radio" name="Fantasy" value="5"> 5
+            </div>
+
+            <div>
+            <p><strong><font size="4" color="white"> What is your rating to <font color="yellow">Film-Noir </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="FilmNoir" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="FilmNoir" value="1" > 1<br>
+                <input type="radio" name="FilmNoir" value="2"> 2<br>
+                <input type="radio" name="FilmNoir" value="3"> 3<br>
+                <input type="radio" name="FilmNoir" value="4"> 4<br>
+                <input type="radio" name="FilmNoir" value="5"> 5
+            </div>
+
+            <div>
+             <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Horror </font>genre?</strong><br/>Example: The Shining </p>
+
+                <input type="radio" name="Horror" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Horror" value="1" > 1<br>
+                <input type="radio" name="Horror" value="2"> 2<br>
+                <input type="radio" name="Horror" value="3"> 3<br>
+                <input type="radio" name="Horror" value="4"> 4<br>
+                <input type="radio" name="Horror" value="5"> 5
+            </div>
+
+            <div>
+            <p><strong><font size="4" color="white"> What is your rating to <font color="yellow">Musical </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Musical" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Musical" value="1" > 1<br>
+                <input type="radio" name="Musical" value="2"> 2<br>
+                <input type="radio" name="Musical" value="3"> 3<br>
+                <input type="radio" name="Musical" value="4"> 4<br>
+                <input type="radio" name="Musical" value="5"> 5
+            </div>
+
+            <div>
+             <p><strong><font size="4" color="white"> What is your rating to <font color="yellow">Mystery </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Mystery" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Mystery" value="1" > 1<br>
+                <input type="radio" name="Mystery" value="2"> 2<br>
+                <input type="radio" name="Mystery" value="3"> 3<br>
+                <input type="radio" name="Mystery" value="4"> 4<br>
+                <input type="radio" name="Mystery" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Romance </font>genre?</strong><br/></p>
+
+                <input type="radio" name="Romance" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Romance" value="1" > 1<br>
+                <input type="radio" name="Romance" value="2"> 2<br>
+                <input type="radio" name="Romance" value="3"> 3<br>
+                <input type="radio" name="Romance" value="4"> 4<br>
+                <input type="radio" name="Romance" value="5"> 5
+            </div>
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Sci-Fi </font>genre?</strong><br/></p>
+
+                <input type="radio" name="SciFi" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="SciFi" value="1" > 1<br>
+                <input type="radio" name="SciFi" value="2"> 2<br>
+                <input type="radio" name="SciFi" value="3"> 3<br>
+                <input type="radio" name="SciFi" value="4"> 4<br>
+                <input type="radio" name="SciFi" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">War </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="War" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="War" value="1" > 1<br>
+                <input type="radio" name="War" value="2"> 2<br>
+                <input type="radio" name="War" value="3"> 3<br>
+                <input type="radio" name="War" value="4"> 4<br>
+                <input type="radio" name="War" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Thriller </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Thriller" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Thriller" value="1" > 1<br>
+                <input type="radio" name="Thriller" value="2"> 2<br>
+                <input type="radio" name="Thriller" value="3"> 3<br>
+                <input type="radio" name="Thriller" value="4"> 4<br>
+                <input type="radio" name="Thriller" value="5"> 5
+            </div>
+
+            <div>
+            <p> <strong><font size="4" color="white">What is your rating to <font color="yellow">Western </font>genre?</strong><br/> </p>
+
+                <input type="radio" name="Western" value="0" checked>I hate this genre!<br>
+                <input type="radio" name="Western" value="1" > 1<br>
+                <input type="radio" name="Western" value="2"> 2<br>
+                <input type="radio" name="Western" value="3"> 3<br>
+                <input type="radio" name="Western" value="4"> 4<br>
+                <input type="radio" name="Western" value="5"> 5
+            </div>
+
+            <div>
+         
+            </div>
+            <button type="submit" class="btn btn-success" id="update"><font color="navy"><strong>Get Recommendations!</strong></button>
+
+            
+
+        </form>
+        
+
+        {% endblock %}
+
+        <li><<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>></i></a></li>
+    <div>
+    <div class="footer">
+    
+        <p>Made with <i class="fa fa-heart fa-fw fa-lg"></i> by Harshita Gupta</p>
+      </div>
+    </div>
+    
+    </body>
+    
+</html>

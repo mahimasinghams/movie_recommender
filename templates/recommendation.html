@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <head>
+        <html lang="en" dir="ltr">
+        <meta charset="utf-8">
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='style.css') }}" /> -->
+        <title>Recommendations</title>
+        <style type="text/css">    
+          body
+          { 
+            padding: 0px;
+
+        }
+        .changes{
+          
+          background-color: #ffeaa7;
+          background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%); */
+          background-color: #ffa69e;
+          background-image: linear-gradient(315deg, #ffa69e 0%, #5d4954 74%);
+        }
+        
+          
+        </style>  
+    </head>
+     
+     <body  class="changes"> 
+        
+         
+          <!-- <a class="btn btn-primary" target="_blank" href="home" role="button" style="color:chocolate" margin-top="20px"><center>BACK TO HOME</center></a> -->
+        
+            <h1><font color="midnightblue"><strong><center>Top Recommendations For You on Your Genre Taste:</center></strong></font></h1>
+            
+            <p> <center>{{ table }}</center></p>
+        
+    </body>
+</html>
